@@ -1,0 +1,21 @@
+---
+
+# Disables unnecessary services that come out-of-the box with debian
+
+- name: Disable exim4
+  service:
+    name: exim4
+    enabled: no
+    state: stopped
+
+- name: Disable nfs-common
+  service: 
+    name: nfs-common
+    enabled: no
+    state: stopped
+
+- name: Disable rpcbind
+  service: 
+    name: rpcbind
+    enabled: no
+    state: stopped

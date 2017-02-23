@@ -1,0 +1,5 @@
+---
+
+ansible_host: localhost
+ansible_user: ansadm
+ansible_port: 2201

@@ -1,0 +1,34 @@
+---
+
+# Installs inetsim package as described on http://www.inetsim.org/packages.html
+
+- name: Add inetsim repo to sourcelist
+  apt_repository:
+    repo: deb http://www.inetsim.org/debian/ binary/
+    state: present
+    filename: 'inetsim'
+
+- name: Add key of www.inetsim.org with apt-key
+  apt_key:
+    url: "http://www.inetsim.org/inetsim-archive-signing-key.asc"
+    state: present
+
+- name: Update apt cache
+  apt:
+    update_cache: yes
+    cache_valid_time: 3600
+
+- name: Install deb package
+  apt:
+    name: inetsim
+    state: present
+
+- name: Disable unnecessary services
+  include: disable-services.yml
+
+- name: Start/Enable inetsim as services
+  service:
+    name: inetsim
+    enabled: yes
+    state: started
+

@@ -1,0 +1,27 @@
+---
+# Disables password login through SSH on the server
+
+
+- name: Check ChallengeResponseAuthentication property
+  lineinfile:
+    dest: /etc/ssh/sshd_config
+    regexp: "ChallengeResponseAuthentication"
+    line: "ChallengeResponseAuthentication no"
+    state: present
+  notify: restart sshd
+
+- name: Check PasswordAuthentication property
+  lineinfile:
+    dest: /etc/ssh/sshd_config
+    regexp: "PasswordAuthentication"
+    line: "PasswordAuthentication no"
+    state: present
+  notify: restart sshd
+
+- name: Check UsePAM property
+  lineinfile:
+    dest: /etc/ssh/sshd_config
+    regexp: "UsePAM"
+    line: "UsePAM no"
+    state: present
+  notify: restart sshd

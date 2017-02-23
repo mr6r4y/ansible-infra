@@ -1,0 +1,5 @@
+[linux]
+local
+linux-inetsim
+
+[windows]
