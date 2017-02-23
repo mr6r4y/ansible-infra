@@ -1,5 +1,6 @@
 [linux]
 local
-linux-inetsim
+inetsim
+re
 
 [windows]
