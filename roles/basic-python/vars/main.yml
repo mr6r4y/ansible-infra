@@ -1,0 +1,15 @@
+---
+
+packages:
+    - python
+    - python-pip
+    - python-dev
+    - ipython
+    - libxml2-dev
+    - libxslt1-dev
+    - zlib1g-dev
+
+pip_packages:
+    - Cython
+    - lxml
+    - requests

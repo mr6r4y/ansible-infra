@@ -1,0 +1,4 @@
+---
+
+ansible_host: ubuntu.test
+ansible_user: ansadm

@@ -1,0 +1,9 @@
+---
+
+# Installs pip, ipython and several basic packages
+
+- name: Install packeges for basic-dev
+  apt:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ packages }}"

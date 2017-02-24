@@ -1,0 +1,11 @@
+---
+
+packages:
+    - build-essential
+    - elfutils
+    - swig2.0
+    - cmake
+    - automake
+    - libtool
+    - flex
+    - bison
