@@ -9,3 +9,6 @@ packages:
     - libtool
     - flex
     - bison
+    - git
+    - subversion
+    - libmagic-dev

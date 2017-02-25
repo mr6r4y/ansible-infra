@@ -4,7 +4,7 @@
   hosts: linux
   become: yes
 
-  tasks:
+  pre_tasks:
     - name: Update Apt cache
       apt:
         update_cache: yes
@@ -13,3 +13,4 @@
   roles:
     - basic-dev
     - basic-python
+    - yara

@@ -1,0 +1,33 @@
+---
+
+- block:
+    - name: Clone YARA repo
+      git:
+        repo: https://github.com/VirusTotal/yara.git
+        dest: /opt/repo/yara
+    
+    - name: Bootstrap YARA
+      shell: ./bootstrap.sh
+      args:
+        chdir: /opt/repo/yara
+
+    - name: Configure YARA
+      shell: ./configure --enable-magic
+      args:
+        chdir: /opt/repo/yara
+
+    - name: Build YARA
+      make:
+        chdir: /opt/repo/yara
+
+  become: false
+
+- name: Install YARA
+  make:
+    chdir: /opt/repo/yara
+    target: install
+
+- name: Clone YARA-rules
+  git:
+    repo: https://github.com/Yara-Rules/rules.git
+    dest: /opt/repo/yara-rules
