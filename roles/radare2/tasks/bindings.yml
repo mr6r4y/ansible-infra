@@ -1,0 +1,37 @@
+---
+
+- name: Add vala repository
+  apt_repository:
+    repo: "ppa:vala-team/ppa"
+    state: present
+
+- name: Update cache
+  apt:
+    update_cache: yes
+
+- name: Install vala
+  apt:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - valac
+
+- block:
+    - name: Clone valabind
+      git:
+        repo: "{{ valabind_repo_url }}"
+        dest: /opt/repo/valabind
+        force: yes
+        update: yes
+    
+    - name: Build valabind
+      make:
+        chdir: /opt/repo/valabind
+
+  become: false
+
+- name: Install valabind
+  make:
+    chdir: /opt/repo/valabind
+    target: install
+

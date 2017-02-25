@@ -12,3 +12,5 @@ packages:
     - git
     - subversion
     - libmagic-dev
+    - pkg-config
+    - libglib2.0-dev

@@ -1,0 +1,6 @@
+---
+
+vala_url: http://download.gnome.org/sources/vala/0.34/vala-0.34.4.tar.xz
+vala_dirname: vala-0.34.4
+valabind_repo_url: https://github.com/radare/valabind.git
+radare2_repo_url: https://github.com/radare/radare2.git

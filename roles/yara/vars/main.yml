@@ -1,2 +1,4 @@
 ---
 
+yara_repo_url: https://github.com/VirusTotal/yara.git
+yara_rules_repo_url: https://github.com/Yara-Rules/rules.git

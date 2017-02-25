@@ -1,0 +1,25 @@
+---
+
+- name: Clone Radare2 repo
+  git:
+    repo: "{{ radare2_repo_url }}"
+    dest: /opt/repo/radare2
+    force: yes
+    update: yes
+  become: false
+
+- name: Build and install Radare2 by its sys/install.sh
+  shell: sys/install.sh
+  args:
+    chdir: /opt/repo/radare2
+
+- name: Get back repo files owner
+  file: 
+    dest: /opt/repo/radare2 
+    owner: ansadm 
+    group: ansadm 
+    recurse: yes
+
+- include: bindings.yml
+
+- include: r2pm.yml
