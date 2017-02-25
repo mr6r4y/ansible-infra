@@ -5,6 +5,8 @@
       git:
         repo: https://github.com/VirusTotal/yara.git
         dest: /opt/repo/yara
+        force: yes
+        update: yes
     
     - name: Bootstrap YARA
       shell: ./bootstrap.sh
@@ -31,3 +33,6 @@
   git:
     repo: https://github.com/Yara-Rules/rules.git
     dest: /opt/repo/yara-rules
+    force: yes
+    update: yes
+  become: false
