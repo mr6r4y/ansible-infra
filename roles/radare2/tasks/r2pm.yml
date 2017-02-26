@@ -7,6 +7,15 @@
       command: r2pm install {{ item }}
       with_items:
         - yara
-        # ...
+        - winapi
+        - pyc
+        - swf
 
   become: false
+
+# Install r2pipe separatey because `sudo pip` behaves better
+# and does not leave root folders in user's directory
+- name: Install r2pipe-py
+  pip:
+    name: r2pipe
+    state: present
