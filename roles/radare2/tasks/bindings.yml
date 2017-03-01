@@ -15,6 +15,7 @@
     state: present
   with_items:
     - valac
+    - libvala-0.34-dev
 
 - block:
     - name: Clone valabind
