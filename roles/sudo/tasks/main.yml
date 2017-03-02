@@ -5,10 +5,3 @@
   apt:
     name: sudo
     state: present
-
-- name: Disable prompt for password on sudo
-  lineinfile:
-    dest: /etc/sudoers
-    regexp: "^\\s*%sudo\\s+ALL\\s*=\\s*NOPASSWD\\s*:\\s*ALL"
-    line: "%sudo\tALL=NOPASSWD:ALL"
-    state: present

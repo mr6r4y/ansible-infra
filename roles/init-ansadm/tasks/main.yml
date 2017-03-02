@@ -7,6 +7,13 @@
     shell: /bin/bash
     state: present
 
+- name: Remove password promnt for users in sudo group
+  lineinfile:
+    dest: "/etc/sudoers"
+    regexp: "(%sudo\\s+ALL\\s*=\\s*NOPASSWD\\s*:\\s*ALL)|(%sudo\\s+ALL\\s*=\\s*\\(ALL\\)\\s*NOPASSWD\\s*:\\s*ALL)"
+    line: "%sudo\tALL=(ALL) NOPASSWD:ALL"
+    state: present
+
 - name: Set SSH public key
   authorized_key:
     user: ansadm
