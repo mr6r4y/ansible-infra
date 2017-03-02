@@ -1,7 +1,7 @@
 ---
 
 - name: Build RE system
-  hosts: linux
+  hosts: linux-re
   become: yes
 
   pre_tasks:
@@ -11,6 +11,4 @@
         cache_valid_time: 3600
 
   roles:
-    - basic-python
-    - yara
-    - radare2
+    - re

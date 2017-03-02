@@ -1,0 +1,7 @@
+---
+
+dependencies:
+  - {role: basic-dev}
+  - {role: basic-python}
+  - {role: yara}
+  - {role: radare2}
