@@ -3,6 +3,8 @@
 packages:
     - build-essential
     - elfutils
+    - gdb
+    - nasm
     - swig2.0
     - cmake
     - automake
