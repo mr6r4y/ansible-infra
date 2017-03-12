@@ -2,7 +2,9 @@
 
 packages:
     - build-essential
-    - elfutils
+    - gdb
+    - dwarves   # pahole, parses .h headers
+    - elfutils  # readelf, etc
     - swig2.0
     - cmake
     - automake

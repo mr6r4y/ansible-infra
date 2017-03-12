@@ -7,7 +7,7 @@ packages:
     - ipython
     - libxml2-dev
     - libxslt1-dev
-    - zlib1g-dev
+    - zlib1g-dev   # used for compiling libs that use -lz
 
 pip_packages:
     - Cython
