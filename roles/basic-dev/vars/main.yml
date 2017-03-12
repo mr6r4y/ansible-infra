@@ -5,6 +5,7 @@ packages:
     - gdb
     - dwarves   # pahole, parses .h headers
     - elfutils  # readelf, etc
+    - nasm
     - swig2.0
     - cmake
     - automake
