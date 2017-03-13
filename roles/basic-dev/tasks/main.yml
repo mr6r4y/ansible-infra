@@ -10,6 +10,6 @@
   file:
     path: /opt/repo
     state: directory
-    group: ansadm
-    owner: ansadm
+    group: "{{ ansible_user }}"
+    owner: "{{ ansible_user }}"
     mode: 0755

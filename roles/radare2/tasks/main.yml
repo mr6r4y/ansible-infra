@@ -16,8 +16,8 @@
 - name: Get back repo files owner
   file: 
     dest: /opt/repo/radare2 
-    owner: ansadm 
-    group: ansadm 
+    owner: "{{ ansible_user }}" 
+    group: "{{ ansible_user }}" 
     recurse: yes
 
 - include: bindings.yml
