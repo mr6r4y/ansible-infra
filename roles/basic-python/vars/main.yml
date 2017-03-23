@@ -8,6 +8,7 @@ packages:
     - libxml2-dev
     - libxslt1-dev
     - zlib1g-dev   # used for compiling libs that use -lz
+    - xdot  # used by r2 agv
 
 pip_packages:
     - Cython
