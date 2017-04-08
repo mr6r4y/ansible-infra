@@ -1,0 +1,23 @@
+---
+
+- name: Clone Capstone repo
+  git:
+    repo: "{{ capstone_repo_url }}"
+    dest: /opt/repo/capstone
+    force: yes
+    update: yes
+  become: false
+  tags: ["capstone-update"]
+
+- name: Build capstone from make.sh
+  command: ./make.sh
+  args:
+    chdir: /opt/repo/capstone
+  become: false
+  tags: ["capstone-update"]
+
+- name: Install capstone from make.sh
+  command: ./make.sh install
+  args:
+    chdir: /opt/repo/capstone
+  tags: ["capstone-update"]

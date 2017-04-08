@@ -7,11 +7,13 @@
     force: yes
     update: yes
   become: false
+  tags: ["r2-update"]
 
 - name: Build and install Radare2 by its sys/install.sh
   shell: sys/install.sh
   args:
     chdir: /opt/repo/radare2
+  tags: ["r2-update"]
 
 - name: Get back repo files owner
   file: 
@@ -19,6 +21,7 @@
     owner: "{{ ansible_user }}" 
     group: "{{ ansible_user }}" 
     recurse: yes
+  tags: ["r2-update"]
 
 - include: bindings.yml
 
