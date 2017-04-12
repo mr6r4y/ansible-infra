@@ -5,6 +5,7 @@
     name: "{{ item }}"
     state: present
   with_items: "{{ packages }}"
+  tags: ["basic-dev"]
 
 - name: Prepare /opt/repo folder
   file:
@@ -13,3 +14,4 @@
     group: "{{ ansible_user }}"
     owner: "{{ ansible_user }}"
     mode: 0755
+  tags: ["basic-dev"]
