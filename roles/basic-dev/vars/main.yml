@@ -18,3 +18,4 @@ packages:
     - pkg-config
     - libglib2.0-dev
     - libgmp3-dev   # used for r2pm pyc
+    - cmake
