@@ -19,3 +19,5 @@ packages:
     - libglib2.0-dev
     - libgmp3-dev   # used for r2pm pyc
     - cmake
+    - libx32gcc-4.8-dev   # Multiplatform compilation support
+    - libc6-dev-i386
