@@ -6,3 +6,4 @@ dependencies:
   - {role: yara}
   - {role: capstone}
   - {role: radare2}
+  - {role: z3}

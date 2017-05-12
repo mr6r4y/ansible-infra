@@ -1,0 +1,18 @@
+---
+
+- name: Clone z3 repo
+  git:
+    repo: "{{ z3_repo_url }}"
+    dest: /opt/repo/z3
+    force: yes
+    version: z3-4.5.0
+    update: yes
+  become: false
+  tags: ["z3-update"]
+
+- name: Build z3
+  command: python scripts/mk_make.py --python
+  args:
+    chdir: /opt/repo/z3
+  become: false
+  tags: ["z3-update"]
