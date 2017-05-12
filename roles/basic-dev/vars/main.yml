@@ -21,3 +21,4 @@ packages:
     - libx32gcc-4.8-dev
     - libc6-dev-i386
     - libffi-dev  # currently for z3
+    - cmake
