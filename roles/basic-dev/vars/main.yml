@@ -18,3 +18,6 @@ packages:
     - pkg-config
     - libglib2.0-dev
     - libgmp3-dev   # used for r2pm pyc
+    - libx32gcc-4.8-dev
+    - libc6-dev-i386
+    - libffi-dev  # currently for z3
