@@ -10,9 +10,21 @@
   become: false
   tags: ["z3-update"]
 
-- name: Build z3
+- name: Configure build for z3
   command: python scripts/mk_make.py --python
   args:
     chdir: /opt/repo/z3
   become: false
+  tags: ["z3-update"]
+
+- name: Build z3
+  make:
+    chdir: /opt/repo/z3/build
+  become: false
+  tags: ["z3-update"]
+
+- name: Install z3
+  make:
+    chdir: /opt/repo/z3/build
+    target: install
   tags: ["z3-update"]
