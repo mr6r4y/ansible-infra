@@ -21,3 +21,9 @@
   args:
     chdir: /opt/repo/capstone
   tags: ["capstone-update"]
+
+- name: Install capstone python bindings
+  make:
+    chdir: /opt/repo/capstone/bindings/python
+    target: install
+  tags: ["capstone-update"]

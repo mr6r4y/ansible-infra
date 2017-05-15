@@ -1,0 +1,9 @@
+---
+
+pip_packages:
+    - archinfo
+    - simuvex
+    - pyvex
+    - cle
+    - claripy
+    - angr

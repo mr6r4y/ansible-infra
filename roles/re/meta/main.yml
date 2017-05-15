@@ -7,3 +7,4 @@ dependencies:
   - {role: capstone}
   - {role: radare2}
   - {role: z3}
+  - {role: angr}
