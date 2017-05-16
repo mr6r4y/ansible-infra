@@ -1,0 +1,9 @@
+---
+
+- name: Install packeges for virt
+  apt:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ packages }}"
+  tags: ["virt"]
+

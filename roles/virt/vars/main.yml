@@ -1,0 +1,8 @@
+---
+
+packages:
+    - qemu-kvm
+    - libvirt
+    - virt-install
+    - virt-manager
+    - virt-install
