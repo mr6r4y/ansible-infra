@@ -6,6 +6,7 @@ packages:
     - dwarves   # pahole, parses .h headers
     - elfutils  # readelf, etc
     - nasm
+    - yasm
     - swig2.0
     - cmake
     - automake
