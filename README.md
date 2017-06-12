@@ -49,5 +49,5 @@ option when executing `ansible` or `ansible-playbook` commands.
 * **build-inetsim.yml** - installing Inetsim latest package from the officially specified
 sources to a fresh Ubuntu. Inetsim is a network simulation program used in malware analysis laboratories
 * **build-re.yml** - install/update/build various tools and packages used for reverse engineering to fresh
-Ubuntu. Currently Radare2, Yara and z3 are within
+Ubuntu. Currently Radare2, angr, Yara and z3 are within
 * **init-ansadm.yml** - initializes `ansadm` as standard user to a fresh Ubuntu.
