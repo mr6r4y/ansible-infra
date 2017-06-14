@@ -6,7 +6,7 @@
     - name: Install r2pm packages
       command: r2pm install {{ item }}
       with_items:
-        - lang-python
+        - lang-python2
         - yara
         - winapi
         - pyc
