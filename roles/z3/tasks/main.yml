@@ -23,6 +23,11 @@
   become: false
   tags: ["z3-update"]
 
+- name: Remove if previous symlink exists for libz3.so (it breaks make install)
+  file:
+    path: /usr/lib/python2.7/dist-packages/z3/lib/libz3.so
+    state: absent
+
 - name: Install z3
   make:
     chdir: /opt/repo/z3/build
