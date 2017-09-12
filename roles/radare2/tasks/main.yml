@@ -9,6 +9,18 @@
   become: false
   tags: ["r2-update"]
 
+- name: Configure
+  shell: ./configure
+  args:
+    chdir: /opt/repo/radare2
+  tags: ["r2-update"]
+
+- name: Purge if anything old
+  make:
+    chdir: /opt/repo/radare2
+    target: purge
+  tags: ["r2-update"]
+
 - name: Build and install Radare2 by its sys/install.sh
   shell: sys/install.sh
   args:
@@ -16,10 +28,10 @@
   tags: ["r2-update"]
 
 - name: Get back repo files owner
-  file: 
-    dest: /opt/repo/radare2 
-    owner: "{{ ansible_user }}" 
-    group: "{{ ansible_user }}" 
+  file:
+    dest: /opt/repo/radare2
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
     recurse: yes
   tags: ["r2-update"]
 
