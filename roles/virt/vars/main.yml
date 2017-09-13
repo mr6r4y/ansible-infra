@@ -2,7 +2,6 @@
 
 packages:
     - qemu-kvm
-    - libvirt
-    - virt-install
+    - libvirt-bin
     - virt-manager
-    - virt-install
+    - bochs
