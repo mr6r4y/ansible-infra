@@ -4,10 +4,12 @@
   apt_repository:
     repo: "ppa:vala-team/ppa"
     state: present
+  tags: ["r2-update"]
 
 - name: Update cache
   apt:
     update_cache: yes
+  tags: ["r2-update"]
 
 - name: Install vala
   apt:
@@ -16,6 +18,7 @@
   with_items:
     - valac
     - libvala-0.34-dev
+  tags: ["r2-update"]
 
 - block:
     - name: Clone valabind
@@ -28,11 +31,12 @@
     - name: Build valabind
       make:
         chdir: /opt/repo/valabind
-
   become: false
+  tags: ["r2-update"]
 
 - name: Install valabind
   make:
     chdir: /opt/repo/valabind
     target: install
+  tags: ["r2-update"]
 
