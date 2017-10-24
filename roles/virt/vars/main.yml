@@ -5,3 +5,6 @@ packages:
     - libvirt-bin
     - virt-manager
     - bochs
+    - oz
+    - libosinfo-bin
+    - libguestfs-tools

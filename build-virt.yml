@@ -1,0 +1,14 @@
+---
+
+- name: Build KVM virtualization
+  hosts: linux-re
+  become: yes
+
+  pre_tasks:
+    - name: Update Apt cache
+      apt:
+        update_cache: yes
+        cache_valid_time: 3600
+
+  roles:
+    - virt
